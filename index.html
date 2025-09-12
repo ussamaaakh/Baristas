@@ -9,13 +9,13 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logoB.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,16 +25,24 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: NiceRestaurant
+  * Template URL: https://bootstrapmade.com/nice-restaurant-bootstrap-template/
+  * Updated: Jun 06 2025 with Bootstrap v5.3.6
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="index-page">
 
-  <!-- Header -->
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
+
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <img src="assets/img/logoB.png" alt="Baristas Logo">
-        <i class="bi bi-fork-knife"></i>
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <img src="assets/img/logoB.png" alt="">
         <h1 class="sitename">Baristas</h1>
       </a>
 
@@ -49,9 +57,10 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
+
     </div>
   </header>
-  <!-- /Header -->
 
   <main class="main">
 
@@ -120,23 +129,298 @@
     </section>
     <!-- /Hero Section -->
 
-    <!-- ... reste du code (Menu, Testimonials, Chefs, Location, Contact, Footer) ... -->
+    <!-- Menu Section -->
+<section id="menu" class="menu section">
 
+  <!-- Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2>Menu</h2>
+    <p>Découvrez le menu complet de chacun de nos points de vente</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up">
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Menu Blog Post Buttons -->
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Mall</h5>
+            <a href="assets/img/menubaristas-mall.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Mohamedia</h5>
+            <a href="assets/img/menubaristas-mohamedia.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Qods</h5>
+            <a href="assets/img/menubaristas-qods.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- End Row -->
+
+  </div>
+
+</section><!-- /Menu Section -->
+
+<!-- Custom CSS to match page style -->
+<style>
+.menu-btn {
+  background-color: #ff6f61; /* couleur du logo */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-btn:hover {
+  background-color: #e55a4f; /* légèrement plus foncé au hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+
+<!-- Location Section -->
+
+    <!-- Location Section -->
+<section id="location" class="location section">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Nos Points de Vente</h2>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
+
+      <!-- Morocco Mall -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Morocco Mall, Casablanca</h3>
+            <p>⏰ 08h00 – 22h00</p>
+            <a href="https://www.google.com/maps/place/BARISTAS/@33.5758483,-7.7103975,17z/data=!3m1!4b1!4m6!3m5!1s0xda7d4a25b30bacb:0x2b5cffc6aed5da0f!8m2!3d33.5758439!4d-7.7078226" 
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parc de Mohammedia -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Parc de Mohammedia</h3>
+            <p>⏰ 07h00 – 00h00</p>
+            <a href="https://www.google.com/maps/place/Parc+des+Villes+Jumel%C3%A9es/@33.70587,-7.3975,17z" 
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boulevard El Qods -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Boulevard El Qods, Casablanca</h3>
+            <p>⏰ 07h00 – 00h00</p>
+            <a href="https://www.google.com/maps/place/Boulevard+Al+Qods,+Casablanca" 
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Location Section -->
+
+
+    <!-- Events Section -->
+    <!-- <section id="events" class="events section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="intro-text text-center mb-5" data-aos="fade-up" data-aos-delay="150">
+          <h2>Create Unforgettable Moments</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum.</p>
+        </div>
+
+        <div class="event-types">
+          <div class="row">
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="event-type-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-calendar-heart"></i>
+                </div>
+                <h3>Weddings &amp; Celebrations</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                <span class="capacity">Up to 150 guests</span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+              <div class="event-type-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h3>Corporate Events</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                <span class="capacity">Up to 100 guests</span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="event-type-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3>Private Gatherings</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+                <span class="capacity">Up to 50 guests</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-showcase" data-aos="fade-up" data-aos-delay="150">
+          <div class="row g-3">
+            <div class="col-lg-8">
+              <div class="main-image" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/img/restaurant/event-1.webp" alt="Event Space" class="img-fluid">
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="row g-3">
+                <div class="col-lg-12 col-md-6">
+                  <div class="gallery-item" data-aos="zoom-in" data-aos-delay="250">
+                    <img src="assets/img/restaurant/event-5.webp" alt="Event" class="img-fluid">
+                  </div>
+                </div>
+                <div class="col-lg-12 col-md-6">
+                  <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="assets/img/restaurant/event-7.webp" alt="Event" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-cta" data-aos="fade-up" data-aos-delay="200">
+          <div class="row align-items-center">
+            <div class="col-lg-8">
+              <h3>Ready to plan your special event?</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo magna. Contact us today to discuss your requirements.</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+              <a href="#" class="btn-reserve">Reserve Venue</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="featured-events" data-aos="fade-up" data-aos-delay="200">
+          <h3>Upcoming Featured Events</h3>
+
+          <div class="row g-4">
+            <div class="col-lg-6 col-md-6">
+              <div class="featured-event-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="event-date">
+                  <span class="month">Jun</span>
+                  <span class="day">18</span>
+                </div>
+                <div class="event-content">
+                  <div class="event-image">
+                    <img src="assets/img/restaurant/event-3.webp" alt="Summer Wine Festival" class="img-fluid">
+                  </div>
+                  <div class="event-info">
+                    <h4>Summer Wine Festival</h4>
+                    <ul class="event-meta">
+                      <li><i class="bi bi-clock"></i> 6:00 PM - 10:00 PM</li>
+                      <li><i class="bi bi-geo-alt"></i> Garden Terrace</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo magna dolor sit amet.</p>
+                    <a href="#" class="btn-details">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <div class="featured-event-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="event-date">
+                  <span class="month">Jul</span>
+                  <span class="day">05</span>
+                </div>
+                <div class="event-content">
+                  <div class="event-image">
+                    <img src="assets/img/restaurant/event-8.webp" alt="Gourmet Tasting Night" class="img-fluid">
+                  </div>
+                  <div class="event-info">
+                    <h4>Gourmet Tasting Night</h4>
+                    <ul class="event-meta">
+                      <li><i class="bi bi-clock"></i> 7:30 PM - 11:00 PM</li>
+                      <li><i class="bi bi-geo-alt"></i> Main Dining Hall</li>
+                    </ul>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed justo magna dolor sit amet.</p>
+                    <a href="#" class="btn-details">View Details</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+     -->
+    <!-- /Events Section -->
+    <!-- Contact Section -->
+    
   </main>
 
   <footer id="footer" class="footer">
+
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Baristas</span>
+            <span class="sitename">NiceRestaurant</span>
           </a>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita.</p>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
-            <a href="#"><i class="bi bi-twitter-x"></i></a>
-            <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-instagram"></i></a>
-            <a href="#"><i class="bi bi-linkedin"></i></a>
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
@@ -149,14 +433,20 @@
           </ul>
         </div>
 
+
         <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
           <h4>Contact Us</h4>
-          <p>A108 Adam Street<br>New York, NY 535022<br>United States</p>
+          <p>A108 Adam Street</p>
+          <p>New York, NY 535022</p>
+          <p>United States</p>
           <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
           <p><strong>Email:</strong> <span>info@example.com</span></p>
         </div>
+
       </div>
     </div>
+
+
   </footer>
 
   <!-- Scroll Top -->
@@ -178,4 +468,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
