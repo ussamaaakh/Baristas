@@ -9,13 +9,15 @@
   <meta name="keywords" content="">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/logoB.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +45,6 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="assets/img/logoB.png" alt="">
-        <i class="bi bi-fork-knife"></i>
         <h1 class="sitename">Baristas</h1>
       </a>
 
@@ -52,9 +53,7 @@
           <li><a href="#hero" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#menu">Menu</a></li>
-          <li><a href="#chefs">Chefs</a></li>
-          <li><a href="#events">Events</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -69,33 +68,43 @@
     <section id="hero" class="hero section">
       <div class="container-fluid hero-container" data-aos="fade-up">
         <div class="row g-0 align-items-center">
+
+          <!-- Colonne gauche -->
           <div class="col-lg-6 content-col">
             <div class="content-wrapper">
-              <h2>Savor the Moment, One Bite at a Time</h2>
-              <p>Discover a journey of flavors at our exquisite restaurant. Immerse yourself in a delightful dining experience crafted with passion and precision.</p>
+              <h2 class="hero-title">Savourez l’Instant, Une Gorgée à la Fois</h2>
+              <p class="hero-subtitle">
+                Bienvenue chez <strong>Baristas</strong>, l’adresse où chaque gorgée et chaque bouchée racontent une histoire.  
+                Entre cafés d’exception, desserts au chocolat belge, viandes maturées et recettes exclusives,  
+                nous vous offrons une expérience culinaire unique, mêlant passion, élégance et convivialité.
+              </p>
 
-              <div class="opening-hours" data-aos="fade-up" data-aos-delay="500">
-                <i class="bi bi-clock"></i>
-                <span>Open Daily: 07am - 00am</span>
+              <div class="store-info">
+                <h4>📍 Nos Points de Vente & Horaires :</h4>
+                <ul>
+                  <li><strong>Morocco Mall, Casablanca</strong><br> ⏰ 08h00 – 22h00</li>
+                  <li><strong>Parc de Mohammedia</strong><br> ⏰ 07h00 – 00h00</li>
+                  <li><strong>Boulevard El Qods, Casablanca</strong><br> ⏰ 07h00 – 00h00</li>
+                </ul>
               </div>
 
 
-              <div class="social-links">
+              <div class="social-links mt-3">
                 <a href="#"><i class="bi bi-facebook"></i></a>
                 <a href="https://www.instagram.com/baristasmaroc/?hl=fr"><i class="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
+          <!-- /Colonne gauche -->
 
+          <!-- Colonne droite (Swiper) -->
           <div class="col-lg-6 swiper-col">
             <div class="swiper hero-swiper init-swiper" data-aos="zoom-out" data-aos-delay="100">
               <script type="application/json" class="swiper-config">
                 {
                   "loop": true,
                   "speed": 800,
-                  "autoplay": {
-                    "delay": 5000
-                  },
+                  "autoplay": { "delay": 5000 },
                   "effect": "fade",
                   "slidesPerView": 1,
                   "navigation": {
@@ -105,526 +114,154 @@
                 }
               </script>
               <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="img-container">
-                    <img src="assets/img/restaurant/misc-square-1.webp" alt="Restaurant Ambience">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-container">
-                    <img src="assets/img/restaurant/misc-square-2.webp" alt="Signature Dish">
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="img-container">
-                    <img src="assets/img/restaurant/misc-square-3.webp" alt="Expert Chefs">
-                  </div>
-                </div>
+                <div class="swiper-slide"><img src="assets/img/restaurant/misc-square-1.webp" alt="Restaurant Ambience"></div>
+                <div class="swiper-slide"><img src="assets/img/restaurant/misc-square-2.webp" alt="Signature Dish"></div>
+                <div class="swiper-slide"><img src="assets/img/restaurant/misc-square-3.webp" alt="Expert Chefs"></div>
               </div>
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
-
           </div>
+          <!-- /Colonne droite -->
+
         </div>
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
+    <!-- /Hero Section -->
 
     <!-- Menu Section -->
-    <section id="menu" class="menu section">
+<section id="menu" class="menu section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Menu</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title text-center" data-aos="fade-up">
+    <h2>Menu</h2>
+    <p>Découvrez le menu complet de chacun de nos points de vente</p>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up">
+  <div class="container" data-aos="fade-up">
 
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+    <div class="row g-4 justify-content-center">
 
-          <div class="menu-filters isotope-filters mb-5">
-            <ul>
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-starters">Starters</li>
-              <li data-filter=".filter-main">Main Courses</li>
-              <li data-filter=".filter-dessert">Desserts</li>
-              <li data-filter=".filter-drinks">Drinks</li>
-            </ul>
-          </div>
-
-          <div class="menu-container isotope-container row gy-4">
-
-            <!-- Regular Menu Items -->
-            <div class="col-lg-6 isotope-item filter-starters">
-              <div class="menu-item d-flex align-items-center gap-4">
-                <img src="assets/img/restaurant/starter-2.webp" alt="Starter" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Bruschetta Trio <span class="menu-tag">Vegetarian</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$8.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-starters">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/starter-5.webp" alt="Starter" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Calamari Fritti <span class="menu-tag">Seafood</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$10.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-main">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/main-1.webp" alt="Main Course" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Wild Mushroom Risotto <span class="menu-tag">Vegetarian</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$18.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-main">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/main-4.webp" alt="Main Course" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Braised Lamb Shank <span class="menu-tag">Chef's Choice</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$26.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-dessert">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/dessert-2.webp" alt="Dessert" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Chocolate Lava Cake <span class="menu-tag">Gluten Free</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$9.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-dessert">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/dessert-7.webp" alt="Dessert" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Tiramisu <span class="menu-tag">Classic</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$8.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-drinks">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/drink-3.webp" alt="Drink" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Signature Cocktail <span class="menu-tag">Alcoholic</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$12.95</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 isotope-item filter-drinks">
-              <div class="d-flex menu-item align-items-center gap-4">
-                <img src="assets/img/restaurant/drink-8.webp" alt="Drink" class="menu-img img-fluid rounded-3">
-                <div class="menu-content">
-                  <h5>Berry Smoothie <span class="menu-tag">Non-Alcoholic</span></h5>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur sed.</p>
-                  <div class="price">$7.95</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up">
-  <a href="assets/img/menubaristas.pdf" class="download-menu" target="_blank">
-    <i class="bi bi-file-earmark-pdf"></i> Download Full Menu
-  </a>
-</div>
-
-
-        <!-- Chef's Specials -->
-        <div class="col-12 mt-5" data-aos="fade-up">
-          <div class="specials-badge">
-            <span><i class="bi bi-award"></i> Chef's Specials</span>
-          </div>
-          <div class="specials-container">
-            <div class="row g-4">
-              <div class="col-md-6">
-                <div class="menu-item special-item">
-                  <div class="menu-item-img">
-                    <img src="assets/img/restaurant/main-3.webp" alt="Special Dish" class="img-fluid">
-                    <div class="menu-item-badges">
-                      <span class="badge-special">Special</span>
-                      <span class="badge-vegan">Vegan</span>
-                    </div>
-                  </div>
-                  <div class="menu-item-content">
-                    <h4>Mediterranean Grilled Salmon</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ut aliquam metus. Vivamus fermentum magna quis.</p>
-                    <div class="menu-item-price">$24.99</div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="menu-item special-item">
-                  <div class="menu-item-img">
-                    <img src="assets/img/restaurant/main-7.webp" alt="Special Dish" class="img-fluid">
-                    <div class="menu-item-badges">
-                      <span class="badge-special">Special</span>
-                      <span class="badge-spicy">Spicy</span>
-                    </div>
-                  </div>
-                  <div class="menu-item-content">
-                    <h4>Signature Ribeye Steak</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan risus ut dui pretium, eget elementum nisi.</p>
-                    <div class="menu-item-price">$32.99</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- Menu Blog Post Buttons -->
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Mall</h5>
+            <a href="assets/img/menubaristas-mall.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Menu Section -->
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimonials</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 3,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/person/person-m-9.webp" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/person/person-f-5.webp" class="testimonial-img" alt="">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/person/person-f-12.webp" class="testimonial-img" alt="">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/person/person-m-12.webp" class="testimonial-img" alt="">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                </p>
-                <div class="profile mt-auto">
-                  <img src="assets/img/person/person-m-13.webp" class="testimonial-img" alt="">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                </div>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
-    <!-- Chefs Section -->
-    <section id="chefs" class="chefs section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Chefs</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-5">
-            <div class="chef-highlight" data-aos="fade-right" data-aos-delay="200">
-              <figure class="chef-image">
-                <img src="assets/img/restaurant/chef-1.webp" class="img-fluid" alt="Executive Chef">
-              </figure>
-              <div class="chef-details">
-                <h3>Executive Chef</h3>
-                <h2>Gabriel Turner</h2>
-                <div class="chef-awards">
-                  <span><i class="bi bi-star-fill"></i> James Beard Award</span>
-                  <span><i class="bi bi-star-fill"></i> Two Michelin Stars</span>
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor nisi elit.</p>
-                <div class="chef-signature">
-                  <img src="assets/img/misc/signature-1.webp" alt="Chef Signature">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <div class="team-container" data-aos="fade-left" data-aos-delay="300">
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="chef-card" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="chef-img">
-                      <img src="assets/img/restaurant/chef-2.webp" class="img-fluid" alt="Chef Portrait">
-                      <div class="social-links">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                      </div>
-                    </div>
-                    <div class="chef-info">
-                      <h4>Sophia Martinez</h4>
-                      <p class="role">Pastry Chef</p>
-                      <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim purus a ipsum faucibus, et porttitor.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="chef-card" data-aos="zoom-in" data-aos-delay="250">
-                    <div class="chef-img">
-                      <img src="assets/img/restaurant/chef-3.webp" class="img-fluid" alt="Chef Portrait">
-                      <div class="social-links">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                      </div>
-                    </div>
-                    <div class="chef-info">
-                      <h4>Marcus Chen</h4>
-                      <p class="role">Sous Chef</p>
-                      <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim purus a ipsum faucibus, et porttitor.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="chef-card" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="chef-img">
-                      <img src="assets/img/restaurant/chef-4.webp" class="img-fluid" alt="Chef Portrait">
-                      <div class="social-links">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                      </div>
-                    </div>
-                    <div class="chef-info">
-                      <h4>Jonathan Williams</h4>
-                      <p class="role">Head of Bar</p>
-                      <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim purus a ipsum faucibus, et porttitor.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="chef-card" data-aos="zoom-in" data-aos-delay="350">
-                    <div class="chef-img">
-                      <img src="assets/img/restaurant/chef-5.webp" class="img-fluid" alt="Chef Portrait">
-                      <div class="social-links">
-                        <a href="#"><i class="bi bi-instagram"></i></a>
-                        <a href="#"><i class="bi bi-twitter-x"></i></a>
-                        <a href="#"><i class="bi bi-facebook"></i></a>
-                      </div>
-                    </div>
-                    <div class="chef-info">
-                      <h4>Isabella Romano</h4>
-                      <p class="role">Grill Master</p>
-                      <p class="details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec dignissim purus a ipsum faucibus, et porttitor.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Mohamedia</h5>
+            <a href="assets/img/menubaristas-mohamedia.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Chefs Section -->
+      <div class="col-md-4">
+        <div class="card text-center h-100" style="background: transparent; border: none;">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center">
+            <h5 class="card-title" style="color: #fff;">Baristas Qods</h5>
+            <a href="assets/img/menubaristas-qods.pdf" target="_blank" 
+               class="btn menu-btn mt-2">Voir le menu</a>
+          </div>
+        </div>
+      </div>
 
-    
+    </div><!-- End Row -->
+
+  </div>
+
+</section><!-- /Menu Section -->
+
+<!-- Custom CSS to match page style -->
+<style>
+.menu-btn {
+  background-color: #ff6f61; /* couleur du logo */
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.menu-btn:hover {
+  background-color: #e55a4f; /* légèrement plus foncé au hover */
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+</style>
+
+<!-- Location Section -->
 
     <!-- Location Section -->
-    <section id="location" class="location section">
+<section id="location" class="location section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Location</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Nos Points de Vente</h2>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
 
-        <div class="row g-4">
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.684949335945!2d-73.98658242357565!3d40.75853057126168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzMwLjciTiA3M8KwNTknMDcuNyJX!5e0!3m2!1sen!2sus!4v1654321234567!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
-            <div class="info-container">
-              <div class="section-header">
-                <h2>Find Us</h2>
-                <p>Visit Us Today</p>
-              </div>
-
-              <div class="info-card" data-aos="fade-up" data-aos-delay="300">
-                <div class="info-icon">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Our Location</h3>
-                  <p>123 Culinary Avenue, Manhattan, NY 10001</p>
-                </div>
-              </div>
-
-              <div class="info-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="info-icon">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Reservations</h3>
-                  <p>+1 (212) 555-7890</p>
-                  <p class="small-text">We recommend making reservations at least 48 hours in advance</p>
-                </div>
-              </div>
-
-              <div class="info-card" data-aos="fade-up" data-aos-delay="500">
-                <div class="info-icon">
-                  <i class="bi bi-clock"></i>
-                </div>
-                <div class="info-content">
-                  <h3>Hours</h3>
-                  <div class="hours-grid">
-                    <div class="day">Monday - Thursday</div>
-                    <div class="time">11:00 AM - 10:00 PM</div>
-
-                    <div class="day">Friday - Saturday</div>
-                    <div class="time">11:00 AM - 11:30 PM</div>
-
-                    <div class="day">Sunday</div>
-                    <div class="time">10:00 AM - 9:00 PM</div>
-
-                    <div class="day">Brunch Hours</div>
-                    <div class="time">Sat &amp; Sun, 10:00 AM - 2:00 PM</div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cta-wrapper" data-aos="fade-up" data-aos-delay="600">
-                <a href="#" class="btn-book">Make a Reservation</a>
-                <a href="#" class="btn-contact">Contact Us</a>
-              </div>
-            </div>
+      <!-- Morocco Mall -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Morocco Mall, Casablanca</h3>
+            <p>⏰ 08h00 – 22h00</p>
+            <a href="https://www.google.com/maps/place/BARISTAS/@33.5758483,-7.7103975,17z/data=!3m1!4b1!4m6!3m5!1s0xda7d4a25b30bacb:0x2b5cffc6aed5da0f!8m2!3d33.5758439!4d-7.7078226" 
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
           </div>
         </div>
-
       </div>
 
-    </section><!-- /Location Section -->
+      <!-- Parc de Mohammedia -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Parc de Mohammedia</h3>
+            <p>⏰ 07h00 – 00h00</p>
+            <a href="https://www.google.com/search?q=baristas+mohamedia" target="_blank" rel="noopener noreferrer"
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Boulevard El Qods -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-card h-100 text-center p-3">
+          <div class="info-icon mb-2"><i class="bi bi-geo-alt"></i></div>
+          <div class="info-content">
+            <h3>Boulevard El Qods, Casablanca</h3>
+            <p>⏰ 07h00 – 00h00</p>
+            <a href="https://www.google.com/maps/place/Boulevard+Al+Qods,+Casablanca" 
+               target="_blank" class="btn btn-outline-primary mt-2" style="color: #fff;border-color: blanchedalmond;">
+              📍 Voir sur Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- End Location Section -->
+
 
     <!-- Events Section -->
     <!-- <section id="events" class="events section">
@@ -766,130 +403,8 @@
     </section>
      -->
     <!-- /Events Section -->
-
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <!-- Contact Info Boxes -->
-        <div class="row gy-4 mb-5">
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-geo-alt"></i>
-              </div>
-              <div class="info-content">
-                <h4>Our Address</h4>
-                <p>1842 Maple Avenue, Portland, Oregon 97204</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-envelope"></i>
-              </div>
-              <div class="info-content">
-                <h4>Email Address</h4>
-                <p>info@example.com</p>
-                <p>contact@example.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="contact-info-box">
-              <div class="icon-box">
-                <i class="bi bi-headset"></i>
-              </div>
-              <div class="info-content">
-                <h4>Hours of Operation</h4>
-                <p>Sunday-Fri: 9 AM - 6 PM</p>
-                <p>Saturday: 9 AM - 4 PM</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Google Maps (Full Width) -->
-      <div class="map-section" data-aos="fade-up" data-aos-delay="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-
-      <!-- Contact Form Section (Overlapping) -->
-      <div class="container form-container-overlap">
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="300">
-          <div class="col-lg-10">
-            <div class="contact-form-wrapper">
-              <h2 class="text-center mb-4">Get in Touch</h2>
-
-              <form action="forms/contact.php" method="post" class="php-email-form">
-                <div class="row g-3">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-person"></i>
-                        <input type="text" class="form-control" name="name" placeholder="First Name" required="">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-envelope"></i>
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" required="">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-text-left"></i>
-                        <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="form-group">
-                      <div class="input-with-icon">
-                        <i class="bi bi-chat-dots message-icon"></i>
-                        <textarea class="form-control" name="message" placeholder="Write Message..." style="height: 180px" required=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <button type="submit" class="btn btn-primary btn-submit">SEND MESSAGE</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
+    
   </main>
 
   <footer id="footer" class="footer">
@@ -898,34 +413,19 @@
       <div class="row gy-4">
         <div class="col-lg-5 col-md-12 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">NiceRestaurant</span>
+            <span class="sitename">Baristas</span>
           </a>
           <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
             <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-          </ul>
-        </div>
-
-
-        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-          <h4>Contact Us</h4>
-          <p>A108 Adam Street</p>
-          <p>New York, NY 535022</p>
-          <p>United States</p>
-          <p class="mt-4"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-          <p><strong>Email:</strong> <span>info@example.com</span></p>
+        <div id=about class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Contactez-nous</h4>
+          <p><strong>Mohammedia : </strong><span>05 20 03 78 20</span></p>
+          <p><strong>Morocoo Mall : </strong><span>05 23 30 73 14</span></p>
+          <p><strong>Email:</strong> <span>info@baristas.ma</span></p>
         </div>
 
       </div>
