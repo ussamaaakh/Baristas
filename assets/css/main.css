@@ -2682,7 +2682,10 @@ section,
 
     /* Optional hover effect */
     .sitename:hover {
-      color: #D9A066; /* changes to gold on hover */
+      color: #614534; 
+      font-size: 36px;    
+      font-weight: 700;   
+      margin: 100px; 
     }
 
     /* Responsive scaling */
