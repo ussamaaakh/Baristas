@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>BARISTAS — Menu</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- FULL WIDTH HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="assets/logo.png" alt="Baristas logo" class="logo">
+
+      <div class="hero-text">
+        <h1>EXPLORE OUR MENU</h1>
+        <p>
+          From rich espresso blends to hearty dishes and indulgent desserts.<br>
+          BARISTAS brings the café experience to your doorstep.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT WRAPPER -->
+  <div class="wrapper">
+
+    <!-- CATEGORIES -->
+    <div class="section-title">Explore Categories</div>
+    <div class="pills" id="pills"></div>
+
+    <!-- PRODUCTS -->
+    <div class="grid" id="grid"></div>
+
+  </div>
+
+  <script src="menu-data.js"></script>
+  <script>
+    const pillsEl = document.getElementById("pills");
+    const gridEl = document.getElementById("grid");
+
+    function renderPills(active){
+      pillsEl.innerHTML = "";
+      menuCategories.forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = "pill" + (cat === active ? " active" : "");
+        btn.textContent = cat;
+        btn.onclick = () => {
+          renderPills(cat);
+          renderGrid(cat);
+        };
+        pillsEl.appendChild(btn);
+      });
+    }
+
+    function renderGrid(active){
+      gridEl.innerHTML = "";
+
+      const items = active === "All"
+        ? menuItems
+        : menuItems.filter(i => i.category === active);
+
+      items.forEach(i => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        card.innerHTML = `
+          <h3>${i.name}</h3>
+          ${i.desc ? `<p>${i.desc}</p>` : ``}
+          <span class="price">${i.price}</span>
+        `;
+
+        gridEl.appendChild(card);
+      });
+    }
+
+    renderPills("All");
+    renderGrid("All");
+  </script>
+
+</body>
+</html>
