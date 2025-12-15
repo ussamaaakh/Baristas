@@ -20,7 +20,7 @@ body{
 /* ================= HERO ================= */
 .hero{
   width:100%;
-  min-height:320px;
+  min-height:360px;
   background:
     linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
     url("assets/hero.jpg") center / cover no-repeat;
@@ -29,32 +29,36 @@ body{
 .hero-inner{
   max-width:1200px;
   margin:0 auto;
-  padding:40px 24px;
+  padding:56px 32px;
   display:flex;
   align-items:center;
-  gap:30px;
+  gap:26px;
   height:100%;
 }
 
 .logo{
-  height:60px;
+  height:64px;
   flex-shrink:0;
 }
 
 .hero-text{
-  color:var(--white);
+  color:#fff;
+  max-width:520px;
 }
 
 .hero-text h1{
-  margin:0 0 6px;
-  font-size:30px;
-  font-weight:800;
+  margin:0 0 10px;
+  font-size:36px;        /* BIG like Figma */
+  font-weight:900;      /* Strong */
+  letter-spacing:.6px;
+  line-height:1.1;
 }
 
 .hero-text p{
   margin:0;
-  font-size:13px;
-  opacity:.9;
+  font-size:14px;
+  opacity:.85;
+  line-height:1.45;
 }
 
 /* ================= CONTENT ================= */
@@ -67,31 +71,41 @@ body{
 /* ================= CATEGORIES ================= */
 .section-title{
   text-align:center;
-  margin:10px 0 14px;
+  margin:28px 0 14px;
   font-weight:700;
+  font-size:16px;
+  color:#3a2418;
 }
+
 
 .pills{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
   justify-content:center;
-  margin-bottom:30px;
+  margin-bottom:34px;
 }
 
 .pill{
-  border:none;
-  padding:10px 18px;
+  border:1px solid #8a6a55;     /* thin brown border */
+  padding:8px 16px;             /* tighter */
   border-radius:999px;
-  background:var(--pill);
+  background:#f1dfc9;           /* beige */
   font-weight:600;
   cursor:pointer;
   font-size:12px;
+  color:#3a2418;
+  transition:all .15s ease;
+}
+
+.pill:hover{
+  background:#ead4ba;
 }
 
 .pill.active{
-  background:var(--pillActive);
-  color:var(--white);
+  background:#3a2418;           /* dark brown */
+  color:#ffffff;
+  border-color:#3a2418;
 }
 
 /* ================= PRODUCTS ================= */
@@ -137,4 +151,15 @@ body{
   .logo{
     margin-bottom:10px;
   }
+  @media (max-width: 800px){
+  .hero-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .hero-text h1{
+    font-size:30px;
+  }
 }
+
+
