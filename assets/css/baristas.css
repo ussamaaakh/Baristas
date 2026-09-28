@@ -96,6 +96,15 @@ section{scroll-margin-top:110px}
 .events>img{width:100%;height:390px;object-fit:cover}
 .button.light{background:var(--cream);color:var(--ink)}
 .button.light:hover{background:#e4d4ba}
+.clients{background:#eee8de;display:grid;grid-template-columns:minmax(260px,.8fr) minmax(0,1.2fr);gap:8%;align-items:center}
+.clients-heading .eyebrow{margin-bottom:16px}
+.clients-heading>p:last-child{max-width:430px;margin-top:22px;font-size:13px}
+.clients-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.client-logo{min-height:150px;background:#fff;border:1px solid #ded5c8;display:flex;align-items:center;justify-content:center;padding:28px;overflow:hidden}
+.client-logo img{width:100%;height:86px;object-fit:contain;filter:saturate(.8);transition:transform .25s ease,filter .25s ease}
+.client-logo:hover img{transform:scale(1.04);filter:saturate(1)}
+.client-logo:nth-child(3) img,.client-logo:nth-child(4) img{transform:scale(1.65)}
+.client-logo:nth-child(3):hover img,.client-logo:nth-child(4):hover img{transform:scale(1.72)}
 .instagram{text-align:center}
 .instagram .eyebrow{margin-bottom:16px}
 .instagram>.text-link{margin-top:22px}
@@ -167,6 +176,7 @@ footer{background:#ece5da;padding:55px 8% 20px}
 .address-actions{font-size:12px}
 .events{grid-template-columns:1fr;gap:30px}
 .events>img{height:290px}
+.clients{grid-template-columns:1fr;gap:30px}.clients-grid{grid-template-columns:1fr 1fr}.client-logo{min-height:125px;padding:20px}.client-logo img{height:72px}
 .instagram-grid{grid-template-columns:1fr 1fr;gap:10px}
 .instagram-grid img{height:180px}
 footer{padding:40px 6% 95px}
@@ -186,6 +196,7 @@ section{scroll-margin-top:90px}
 .hero-photo{min-height:340px}
 .image-wrap img{height:300px}
 .instagram-grid img{height:145px}
+.clients-grid{grid-template-columns:1fr}.client-logo{min-height:110px}
 }
 
 .shared-menu{display:grid;grid-template-columns:240px 1fr;background:#eee7dc;border:1px solid var(--line);margin:0 0 38px;overflow:hidden}
