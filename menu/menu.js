@@ -1,34 +1,42 @@
-let activeCategory = 'Toute la carte';
-const search = document.getElementById('search');
-const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
-const pills = document.getElementById('pills');
-['Toute la carte', ...menuCategories].forEach(category => {
-  const button = document.createElement('button');
-  button.type = 'button'; button.className = 'pill'; button.textContent = category;
-  button.addEventListener('click', () => { activeCategory = category; render(); });
-  pills.append(button);
-});
-function render() {
-  [...pills.children].forEach(button => { const active = button.textContent === activeCategory; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
-  const query = normalize(search.value.trim());
-  const items = menuItems.filter(item => (activeCategory === 'Toute la carte' || item.category === activeCategory) && normalize(`${item.name} ${item.desc || ''} ${item.category}`).includes(query));
-  document.getElementById('category-title').textContent = activeCategory;
-  document.getElementById('result-count').textContent = `${items.length} résultat${items.length === 1 ? '' : 's'}`;
-  const grid = document.getElementById('grid'); grid.replaceChildren();
-  items.forEach(item => {
-    const card = document.createElement('article'); card.className = 'dish';
-    const category = document.createElement('span'); category.className = 'dish-category'; category.textContent = item.category;
-    const title = document.createElement('h3'); title.textContent = item.name;
-    const description = document.createElement('p'); description.textContent = item.desc || '';
-    const price = document.createElement('span'); price.className = 'price'; price.textContent = item.price;
-    card.append(category,title,description,price); grid.append(card);
+const cityButtons = [...document.querySelectorAll('[data-city]')];
+const gallery = document.getElementById('menu-gallery');
+const queryCity = new URLSearchParams(location.search).get('city');
+const cityConfig = {
+  casablanca: { pages: 21, assetCity: 'casablanca' },
+  laayoune: { pages: 21, assetCity: 'casablanca' },
+  mohammedia: { pages: 22, assetCity: 'mohammedia' }
+};
+
+function setCity(city) {
+  const selected = cityConfig[city] ? city : 'casablanca';
+  const config = cityConfig[selected];
+  history.replaceState(null, '', `?city=${selected}`);
+  cityButtons.forEach(button => {
+    const active = button.dataset.city === selected;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-pressed', String(active));
   });
-  if(!items.length) {
-    const empty = document.createElement('div'); empty.className = 'empty-state';
-    const message = document.createElement('p'); message.textContent = 'Aucun plat ne correspond à votre recherche. Essayez une autre envie ou une autre catégorie.';
-    const reset = document.createElement('button'); reset.className = 'button'; reset.textContent = 'Afficher toute la carte'; reset.addEventListener('click', () => { search.value = ''; activeCategory = 'Toute la carte'; render(); search.focus(); });
-    empty.append(message,reset); grid.append(empty);
+  gallery.replaceChildren();
+  for (let page = 1; page <= config.pages; page += 1) {
+    const number = String(page).padStart(2, '0');
+    const link = document.createElement('a');
+    link.className = 'menu-page';
+    link.href = `images/${config.assetCity}/page-${number}.jpg`;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.setAttribute('aria-label', `Ouvrir la page ${page} de la carte ${selected} en grand`);
+    const image = document.createElement('img');
+    image.src = link.href;
+    const cityName = selected === 'mohammedia' ? 'Mohammedia' : selected === 'laayoune' ? 'Laâyoune' : 'Casablanca';
+    image.alt = `Carte Baristas ${cityName} — page ${page}`;
+    image.width = 1131;
+    image.height = 1600;
+    if (page > 2) image.loading = 'lazy';
+    image.decoding = 'async';
+    link.append(image);
+    gallery.append(link);
   }
 }
-search.addEventListener('input',render);
-render();
+
+cityButtons.forEach(button => button.addEventListener('click', () => setCity(button.dataset.city)));
+setCity(cityConfig[queryCity] ? queryCity : 'casablanca');
