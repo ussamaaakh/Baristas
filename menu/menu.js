@@ -1,10 +1,11 @@
 const cityButtons = [...document.querySelectorAll('[data-city]')];
 const gallery = document.getElementById('menu-gallery');
 const queryCity = new URLSearchParams(location.search).get('city');
+const menuVersion = '20261110-1';
 const cityConfig = {
-  casablanca: { pages: 21, assetCity: 'casablanca' },
-  laayoune: { pages: 21, assetCity: 'casablanca' },
-  mohammedia: { pages: 22, assetCity: 'mohammedia' }
+  casablanca: { pages: 24, assetCity: 'casablanca' },
+  laayoune: { pages: 24, assetCity: 'casablanca' },
+  mohammedia: { pages: 25, assetCity: 'mohammedia' }
 };
 
 function setCity(city) {
@@ -21,7 +22,7 @@ function setCity(city) {
     const number = String(page).padStart(2, '0');
     const link = document.createElement('a');
     link.className = 'menu-page';
-    link.href = `images/${config.assetCity}/page-${number}.jpg`;
+    link.href = `images/${config.assetCity}/page-${number}.jpg?v=${menuVersion}`;
     link.target = '_blank';
     link.rel = 'noopener';
     link.setAttribute('aria-label', `Ouvrir la page ${page} de la carte ${selected} en grand`);
